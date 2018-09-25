@@ -24,8 +24,8 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1. preferredMaxLayoutView code sometimes runs only after cell height is decided. (wrap occurs after tableCell appears). Is there a way to update cell dimensions after Label wrap occurs?
-2. preferredMaxLayoutView sometimes runs only when scrolling, not when App initially launches. Runtime errors may occur when switching device orientation.
+1. preferredMaxLayoutWidth code sometimes runs only after cell height is decided. (wrap occurs after tableCell appears). Is there a way to update cell dimensions after Label wrap occurs?
+2. preferredMaxLayoutWidth sometimes runs only when scrolling, not when App initially launches. Runtime errors may occur when switching device orientation.
 
 ## Video Walkthrough
 
