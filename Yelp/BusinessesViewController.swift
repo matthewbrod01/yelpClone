@@ -12,6 +12,8 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
     
     var businesses: [Business]!
     
+    var filteredBusinesses: [Business]! = []
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -24,6 +26,13 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         tableView.estimatedRowHeight = 150
         // set row height to autolayout constraints dimension
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        // create the search bar programatically since you won't be
+        // able to drag one onto the navigation bar
+        let searchBar = UISearchBar()
+        searchBar.sizeToFit()
+        
+        navigationItem.titleView = searchBar
         
         Business.searchWithTerm(term: "Thai", completion: { (businesses: [Business]?, error: Error?) -> Void in
             
@@ -68,6 +77,8 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         
         return cell
     }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

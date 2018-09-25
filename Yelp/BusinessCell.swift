@@ -46,11 +46,6 @@ class BusinessCell: UITableViewCell {
         
     }
     
-    override func didMoveToSuperview() {
-        super.didMoveToSuperview()
-        layoutIfNeeded()
-    }
-    
     // apply force-wrap when dimensions change
     override func layoutSubviews() {
         super.layoutSubviews()
