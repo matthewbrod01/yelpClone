@@ -19,7 +19,11 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 110
+        
+        // set scroll height so that app doesn't calculate thousands of cells
+        tableView.estimatedRowHeight = 150
+        // set row height to autolayout constraints dimension
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         Business.searchWithTerm(term: "Thai", completion: { (businesses: [Business]?, error: Error?) -> Void in
             
